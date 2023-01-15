@@ -198,14 +198,14 @@ int main() {
                 break;
             }
             case 5: {
-                for (auto team : teams) {
+                for (auto &team : teams) {
                     std::cout << "Team ID: ";
                     std::cout << team.first << std::endl;
                     std::cout << "Name: " << team.second->getName() << std::endl;
                     std::cout << "Coach: " << team.second->getCoach() << std::endl;
                     std::cout << "Stadium: " << team.second->getStadium() << std::endl;
                     std::cout << "Players: " << std::endl;
-                    for (auto player : team.second->getPlayers()) {
+                    for (auto &player : team.second->getPlayers()) {
                         std::cout << player.first << " - " << player.second << std::endl;
                     }
                 }
